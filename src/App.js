@@ -1,11 +1,15 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import { Button, Info, Load,Main } from './Styles/styled';
 function App() {
   const [person, setPerson] = useState(null);
   const [loading, setloading] = useState(true);
   const url = "https://api.randomuser.me/";
 
+  useEffect(() => {
+    fetch()
+  }, [])
+  
   const fetch = async() => {
     setloading(true);
     const response = await axios.get(url);
